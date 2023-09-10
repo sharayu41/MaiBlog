@@ -1,0 +1,33 @@
+.container{
+    /* background-color: yellow; */
+    display: flex;
+    max-height:max-content;
+}
+.left{
+    background-color: brown;
+    display: flex;
+    flex-grow: 3;
+    background-image: url(https://cdn.iris.nitk.ac.in/mb.jpg);
+    background-repeat: no-repeat;
+    height:45rem;
+    background-size: cover;
+}
+
+.right{
+    /* background-color: darkblue; */
+    display: flex;
+    padding-top: 10%;
+    flex-grow: 7;
+    justify-content: center;
+}
+.cardy{
+    background-color: aliceblue;
+    transition: box-shadow .1s;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 2%;
+}
+
+.cardy:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  }
