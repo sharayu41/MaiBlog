@@ -1,16 +1,38 @@
-<h2>Forgot your password?</h2>
+<%= stylesheet_link_tag 'login' %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<h1 class="fw-bold text-center mt-3" >MaiBlog</h1>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div id="container">
+
+  <div class="left">
+    <%= image_tag "cover.jpg" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+  <div class="right">
+    <div class="text-center px-5 pt-3">
+    </div>
+    <div class="card" id ="cardu" style="width: 28rem; height: 20em">
+      <div class="card-body cardy">
+        <h2 class="card-title fw-bold">Forgot your password?</h2>
+         <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+         <%= render "devise/shared/error_messages", resource: resource %>
+         <p class="parag">"Regain Access to Your Maiblogs World - Reset Your Password Here!"<br/>
+          <div class="field mt-3">
+            <%= f.label :email, for:"email", class:"form-label" %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"Enter your email" %>
+          </div><br/>
+          <div class="actions d-grid gap-2 mt-3">
+            <%= f.submit "Send me reset password instructions" , class:"btn btn-primary" %>
+          </div>
+       <% end %>
+     </div>
 
-<%= render "devise/shared/links" %>
+    </div>
+    
+  <div>
+ <hr>
+  <div class="mb-5 no-gutters">
+    <p>Create an account? <%= link_to "Sign up", new_registration_path(resource_name) %></p>
+    <p>Have an account? <%= link_to "Log in", new_session_path(resource_name) %></p>
+  </div>
+  
