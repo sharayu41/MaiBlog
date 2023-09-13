@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     root 'devise/sessions#new'
+    get 'home/index'
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  
   end
 
 end
+  
