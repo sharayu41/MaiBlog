@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    margin-left: 0.5em;
+    margin-right:0.5em;
+}
+.navbar{
+    width: 100%;
+}
+
+.searchbar{
+    width: 25em;
+}
+
+.newicon{
+    size: 100em;
+}
+
+.notify{
+    size: 100em;
+}
+
+.profile{
+    size: 100em;  
+}
