@@ -6,9 +6,6 @@
          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       </form>
     </div>
-        <div>
-          <a class="nav-link" href="/users/sign_out">Sign Out</a>
-        </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -16,13 +13,20 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
         <a href="/blogs/new"><i class="bi bi-pen-fill"></i></a>
       </div>
-    <div class="notifi">
+    <div class="notification">
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
        <i class="bi bi-bell-fill"></i>
     </div>
     <div class="profile">
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-       <a href="/users/edit"><i class="bi bi-person-circle"></i></a>
+       <a data-bs-toggle="dropdown"><i class="bi bi-person-circle"></i></a>
     </a>
-  </div>
+      <div class="dropstart">
+        <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/users/sign_out">Sign Out</a></li>
+          <li><a class="dropdown-item" href="#">Action two</a></li>
+          <li><a class="dropdown-item" href="#">Action three</a></li>
+        </ul>
+     </div>
 </nav>
+
