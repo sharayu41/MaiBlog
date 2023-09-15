@@ -1,0 +1,15 @@
+#cont {
+    background-color: aqua;
+    display: grid;
+    width: 72%;
+    height: 80%;
+    overflow-y: scroll;
+    padding-left: 2.5%;
+    padding-top: 3%;
+}
+
+.child {
+    background-color: blueviolet;
+    margin: 3em;
+    height: 10vh;
+}
