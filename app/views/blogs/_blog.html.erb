@@ -25,6 +25,9 @@
 <%=image_tag file,height:"200",width:"200"%>
 <%end%>
   </ul>
-
-
+<h2>Comments:</h2>
+<% blog.comments.each do |comment| %>
+  <%= comment.id%><br>
+  <%= comment.content%><br>
+<% end %>
 </div>
