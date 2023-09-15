@@ -21,8 +21,8 @@
 
   <h2>Files:</h2>
   <ul>
-  <%= blog.blogimages.each do |file| %>
-<%= file%>
+  <% blog.blogimages.each do |file| %>
+<%=image_tag file,height:"200",width:"200"%>
 <%end%>
   </ul>
 

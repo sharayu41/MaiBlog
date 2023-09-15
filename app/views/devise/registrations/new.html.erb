@@ -28,11 +28,17 @@
               <% end %><br />
               <%= f.password_field :password, autocomplete: "new-password" ,class:"form-control", id:"password",placeholder:"Enter your new password"  %>
            </div>
+          
     
            <div class="field">
             <%= f.label :password_confirmation ,for:"password", class:"form-label" %><br />
             <%= f.password_field :password_confirmation, autocomplete: "new-password"  ,class:"form-control", id:"password",placeholder:"Confirm your new password"%>
            </div>
+
+           <div class="field">
+            <%= f.label :profile %>
+            <%= f.file_field :profile %>
+          </div>
     
            <div class="d-grid gap-2 mt-3">
              <%= f.submit "Sign up" ,class:"btn btn-primary" %>
