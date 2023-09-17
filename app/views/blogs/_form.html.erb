@@ -2,7 +2,7 @@
   <% if blog.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
-
+      <%= stylesheet_link_tag 'newblog' %>
       <ul>
         <% blog.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class=" title mb-3 ">
+    <%= form.label :title, style: "display: block" ,class:"form-label" ,for:"formGroupExampleInput" %>
+    <%= form.text_field :title ,class:"form-control" ,id:"formGroupExampleInput", placeholder:"Enter your blog Title here" %>
   </div>
 
-  <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.text_area :content %>
+  <div class=" contents form-floating">
+    <%= form.label :content, style: "display: block" , for:"floatingTextarea" %>
+    <%= form.text_area :content ,class:"form-control", placeholder:"Tell your story" , id:"floatingTextarea" %>
   </div>
 
-  <div>
+  <div class=" photo mt-3">
   <%= form.label :blogimages, style: "display: block" %>
   <%= form.file_field :blogimages , multiple: true %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <%= form.submit class:"btn btn-primary"%>
   </div>
 <% end %>
