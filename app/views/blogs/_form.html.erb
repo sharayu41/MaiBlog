@@ -13,17 +13,17 @@
 
   <div class=" title mb-3 ">
     <%= form.label :title, style: "display: block" ,class:"form-label" ,for:"formGroupExampleInput" %>
-    <%= form.text_field :title ,class:"form-control" ,id:"formGroupExampleInput", placeholder:"Enter your blog Title here" %>
+    <%= form.text_field :title ,class:"form-control" ,id:"formGroupExampleInput", placeholder:"Enter your blog Title here", style: "font-weight: bold;" %>
   </div>
 
   <div class=" contents form-floating">
-    <%= form.label :content, style: "display: block" , for:"floatingTextarea" %>
-    <%= form.text_area :content ,class:"form-control", placeholder:"Tell your story" , id:"floatingTextarea" %>
+    <%= form.label :content, style: "display: block" ,for:"floatingTextarea2" %>
+    <%= form.text_area :content ,class:"form-control", placeholder:"Tell your story" , id:"floatingTextarea2" ,style:"height: 100vh" %>
   </div>
 
-  <div class=" photo mt-3">
-  <%= form.label :blogimages, style: "display: block" %>
-  <%= form.file_field :blogimages , multiple: true %>
+  <div class="input-group mb-3 mt-3">
+  <%= form.label :blogimages, style: "display: block" ,class:"input-group-text" ,for:"inputGroupFile02" %>
+  <%= form.file_field :blogimages , multiple: true ,class:"form-control", id:"inputGroupFile02" %>
   </div>
 
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
