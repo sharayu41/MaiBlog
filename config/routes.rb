@@ -2,7 +2,6 @@
 
 Rails.application.routes.draw do
   resources :comments
-  resources :blogs
   get 'home/index'
   devise_for :users
 
@@ -10,6 +9,13 @@ Rails.application.routes.draw do
     root 'devise/sessions#new'
     get '/users/sign_out' => 'devise/sessions#destroy'
   end 
+
+  resources :blogs do
+    member do
+      get 'like'
+      get 'dislike'
+    end
+  end
 
 end
 
