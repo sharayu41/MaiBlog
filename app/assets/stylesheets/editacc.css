@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.edit{
+    /* background-color: bisque; */
+    width:100%;
+    padding-left: 25%;
+    padding-right: 25%;
+    min-height: 100vh;
+}
+
+.actions{
+    /* display: flex;
+    justify-content: center;
+    text-align: center; */
+    width: 10em;
+    position: relative;
+    left: 40%;
+    right: 40%;
+}
+.cancel{
+    /* display: flex;
+    justify-content: flex-start; */
+}
+#svgLinkContainer{
+    transform:scale(2.5)
+}

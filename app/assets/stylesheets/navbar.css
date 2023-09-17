@@ -2,25 +2,34 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    margin-left: 0.5em;
+}
+.navbar {
+    width:100%;
+}
+
+.searchbar {
+    width: 25em;
+    margin-left: 0.25em;
     margin-right:0.5em;
 }
-.navbar{
-    width: 100%;
+
+.newicon {
+    color: black;
+    margin-left: 1em;
+    margin-right:1em;
+    font-size: 1.5rem
 }
 
-.searchbar{
-    width: 25em;
+.notification {
+    font-size: 1.5rem;
+    color: black;
+    margin-left: 1em;
+    margin-right:1em;
 }
 
-.newicon{
-    size: 100em;
-}
-
-.notify{
-    size: 100em;
-}
-
-.profile{
-    size: 100em;  
+.profile {
+    font-size: 1.5rem;
+    color: black;
+    margin-left: 1em;
+    margin-right:1em; 
 }
