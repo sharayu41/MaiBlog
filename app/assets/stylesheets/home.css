@@ -1,15 +1,46 @@
 #cont {
     background-color: aqua;
     display: grid;
-    width: 72%;
+    width: 65%;
     height: 80%;
     overflow-y: scroll;
-    padding-left: 2.5%;
     padding-top: 3%;
+    margin: auto;
 }
 
-.child {
-    background-color: blueviolet;
-    margin: 3em;
-    height: 10vh;
+.cardy{
+    display: flex;
+    margin:auto;
+
+}
+
+.leftct {
+    background-color: rgb(255, 255, 255);
+    flex-grow: 8;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titl {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    height: 15%;
+}
+
+.rightct {
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    width: 200px;
+    height: 195px;
+    align-items: center;
+    padding-top: 0.8%;
+}
+
+.content {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 85%;
 }
