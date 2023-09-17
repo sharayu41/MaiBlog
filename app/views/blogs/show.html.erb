@@ -3,6 +3,12 @@
 <%= render @blog %>
 
 <div>
+  <p id="like-count-<%= @blog.id %>">
+  <%= link_to "Dislike", dislike_blog_path(@blog), method: :get, remote: true, class: "dislike-button", data: { blog_id: @blog.id } %>
+
+  <strong>Likes:</strong> <%= @blog.likes %>
+  </p>
+  <%= link_to "Like", like_blog_path(@blog), method: :get, remote: true, class: "like-button", data: { blog_id: @blog.id } %>
   <%= link_to "Edit this blog", edit_blog_path(@blog) %> |
   <%= link_to "Back to blogs", blogs_path %>
 

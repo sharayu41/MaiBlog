@@ -1,7 +1,11 @@
 <%= stylesheet_link_tag 'home' %>
 <h1>Home#index</h1>
 <a href = "/users/sign_out"> Sign Out </a>
-<%=image_tag  @user.profile,height:"500"%>
+ <%
+=begin%>
+ <%=image_tag  @user.profile,height:"500"%> 
+<%
+=end%>
   
 
 
@@ -38,11 +42,6 @@
             aria-expanded="false">
             Profile
           </button>
-          <ul class="dropdown-menu">
-            <li><button class="dropdown-item" type="button">Action</button></li>
-            <li><button class="dropdown-item" type="button">Another action</button></li>
-            <li><button class="dropdown-item" type="button">Something else here</button></li>
-          </ul>
       </li>
     </div>
   </div>
