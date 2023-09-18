@@ -22,8 +22,7 @@ class BlogsController < ApplicationController
   # POST /blogs or /blogs.json
   def create
     @blog = Blog.new(blog_params)
-    @blog.likes=0
-    @blog.dislikes=0
+    @blog.dislikes
     respond_to do |format|
       if @blog.save
         format.html { redirect_to blog_url(@blog), notice: "Blog was successfully created." }
@@ -51,30 +50,9 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1 or /blogs/1.json
   def destroy
     @blog.destroy
-
     respond_to do |format|
       format.html { redirect_to blogs_url, notice: "Blog was successfully destroyed." }
       format.json { head :no_content }
-    end
-  end
-
-  def like
-    @blog = Blog.find(params[:id])
-    @blog.increment!(:likes) # Increment the likes count for the blog.
-    respond_to do |format|
-      format.html { redirect_to @blog, notice: 'Liked the blog!' }
-      format.json { render json: { likes: @blog.likes } }
-    end
-  end
-  def dislike
-    @blog = Blog.find(params[:id])
-
-    if @blog.liked_by_current_user?(current_user)
-      # User has previously liked the blog, so they can't dislike it.
-      flash[:alert] = 'You can only dislike if you haven\'t liked it.'
-    else
-      @blog.increment!(:dislikes) # Increment the dislikes count for the blog.
-      flash[:notice] = 'Disliked the blog!'
     end
   end
 
@@ -86,7 +64,7 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params
-      params.require(:blog).permit(:title, :content, :likes, :dislikes,blogimages: [])
+      params.require(:blog).permit(:title, :content, :dislikes, blogimages: [], likes: [])
     end
 
  

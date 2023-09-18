@@ -1,0 +1,12 @@
+.commentbox{
+    border-bottom-style:groove;
+    border-width:1px;
+    transition:0.5s ,0.5s;
+    padding-left:6%;
+    padding-top:5%;
+}
+
+.commentbox:hover{
+    box-shadow:2px 2px 5px black;
+    border-bottom-style:none;
+}
