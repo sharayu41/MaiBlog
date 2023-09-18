@@ -11,10 +11,8 @@ Rails.application.routes.draw do
   end 
 
   resources :blogs do
-    member do
-      get 'like'
-      get 'dislike'
-    end
+    get 'like', to: 'likes#create'
+    get 'unlike', to: 'likes#destroy'
   end
 
 end
