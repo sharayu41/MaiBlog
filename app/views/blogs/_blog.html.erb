@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag 'comments' %>
 <div id="<%= dom_id blog %>">
   <p>
     <strong>Title:</strong>
@@ -11,7 +12,7 @@
 
   <p>
     <strong>Likes:</strong>
-    <%= blog.likes %>
+    <%= blog.likes.count %>
   </p>
 
   <p>
@@ -25,9 +26,28 @@
     <%=image_tag file,height:"200",width:"200"%>
     <%end%>
   </ul>
-<h2>Comments:</h2>
-<% blog.comments.each do |comment| %>
-  <%= comment.id%><br>
-  <%= comment.content%><br>
-<% end %>
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Comments</button>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Comments</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <% blog.comments.each do |comment| %>
+        <div class="commentbox">
+          <div class="commenterid"><p>Comment Id: <%= comment.id%></div>
+          <%= comment.content%><br><br>
+          <%= comment.likes%> Likes  &emsp;&emsp;&emsp;
+          <%= comment.dislikes%>Dislikes<br></p>
+          <i class="bi bi-hand-thumbs-up"></i><br>
+        </div>
+        <br>
+      <% end %>
+      </div>
+    </div>
+  </div>
+
+  
+
 </div>
+
