@@ -1,10 +1,15 @@
-<h1>Editing blog</h1>
+<%= render 'home/navbar'%>
+<%= stylesheet_link_tag 'newblog' %>
 
-<%= render "form", blog: @blog %>
-
-<br>
-
-<div>
-  <%= link_to "Show this blog", @blog %> |
-  <%= link_to "Back to blogs", blogs_path %>
+<div class="containers">
+  <h1 class="fw-bold text-center">Editing blog</h1>
+  
+  <%= render "form", blog: @blog %>
+  
+  <br>
+  
+  <div class="d-grid gap-2 d-md-block">
+    <%= link_to "Show this blog", @blog ,class:"btn btn-primary" %> |
+    <%= link_to "Back to blogs", blogs_path ,class:"btn btn-primary" %>
+  </div>
 </div>
