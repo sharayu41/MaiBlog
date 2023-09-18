@@ -4,7 +4,6 @@
 
       <h2 class="text-center mt-3">Edit <%= resource_name.to_s.humanize %>
       </h2>
-
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= render "devise/shared/error_messages" , resource: resource %>
 
@@ -44,8 +43,11 @@
                     id:"password",placeholder:"Enter Your New Password" %>
               </div><br />
 
-              <div class="actions btn btn-primary btn-sm text-center" style="display: flex; justify-content: center;">
-                <%= f.submit "Update" ,class:"btn btn-primary" %>
+              <div class="click">
+                <div class="actions btn btn-primary btn-sm text-center" style="display: flex; justify-content: center;">
+                  <%= f.submit "Update" ,class:"btn btn-primary" %>
+                </div>
+                <div class="back"><%= link_to "Back",:back,class:"btn btn-primary btn-lg" %></div>
               </div>
               <% end %>
                 <hr>
@@ -57,23 +59,7 @@
                       confirm: "Are you sure?" , turbo_confirm: "Are you sure?" }, method: :delete,class:"btn
                       btn-danger" %>
                   </div>
-                </div>
-                    <i id="svgLinkContainer" class="bi bi-arrow-left-circle-fill" style="transform: scale()"><%= link_to "Back", :back, class: "btn btn-primary", id:"link", style: 'text-decoration:none; padding:0.5em 1em; border-radius: 10px' %></i>
-      
-                
+                </div>                
     </div>
 
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var svgLinkContainer = document.getElementById("svgLinkContainer");
-  var link = document.getElementById("link");
-
-  if (svgLinkContainer && link) {
-    svgLinkContainer.addEventListener("click", function() {
-      // Trigger a click on the link
-      link.click();
-    });
-  }
-});
-</script>
