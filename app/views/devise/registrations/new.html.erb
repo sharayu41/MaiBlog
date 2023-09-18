@@ -35,11 +35,11 @@
             <%= f.password_field :password_confirmation, autocomplete: "new-password"  ,class:"form-control", id:"password",placeholder:"Confirm your new password"%>
            </div>
 
-           <div class="field mt-3">
-            <%= f.label :profile %>
-            <%= f.file_field :profile %>
+           <div class="field mt-3 input-group mb-3 mt-3">
+            <%= f.label :profile ,class:"input-group-text" ,for:"inputGroupFile02"%>
+            <%= f.file_field :profile ,class:"form-control", id:"inputGroupFile02" %>
           </div>
-    
+
            <div class="d-grid gap-2 mt-3">
              <%= f.submit "Sign up" ,class:"btn btn-primary" %>
            </div>
